@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Create{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Fantasy Football by Betler">
+    <input type="file" name="image" id="image">
+    <label for="image">Select image...</label>
+    <textarea name="description" cols="30" rows="10"
+        placeholder="Get some money in the pot for Betler's fantasy league"></textarea>
+    <input type="text" name="goal">
+    <input type="text" name="min_contribution">
+    <input type="submit" value="Create crowdfund">
+</form>
+{% endblock %}

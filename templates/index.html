@@ -1,7 +1,11 @@
-<!doctype html>
-<title>Hello from Flask</title>
-{% if name %}
-<h1>Hello {{ name }}!</h1>
-{% else %}
-<h1>Hello, World!</h1>
-{% endif %}
+{% extends 'layout.html' %}
+
+{% block title %}All Crowdmos{% endblock %}
+
+{% block content %}
+{% for post in posts %}
+<h1><a href="/crowdmo/{{post.id}}">{{post.title}}</a></h1>
+<p>{{post.description}}</p>
+<p>{{post.goal}}</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}{{post.title}}{% endblock %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+<p>Created on: {{post.created_date.month}}/{{post.created_date.day}}/{{post.created_date.year}}</p>
+<img src="{{ url_for('static', filename=post.image_location) }}">
+<!-- <h3>{{post.owner}}</h3> -->
+<p>{{post.description}}</p>
+<h4>Goal: {{progress}}/{{post.goal}}</h4>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0"
+        aria-valuemax="{{post.goal}}">
+    </div>
+</div>
+<h3>Minimum contribution: {{post.min_contribution}}</h3>
+<form method="POST">
+    <label for="venmo_username">Want to contribute? Type your Venmo username in below to be requested via
+        Venmo.</label>
+    <input type="text" name="venmo_username">
+    <input type="submit" value="Request me!">
+</form>
+<h3>Latest contributors</h3>
+<p>Last updated @ {{post.last_updated}}</p>
+{% for donor in donors.keys() %}
+<p>{{donor}}-{{donors[donor]}}</p>
+{% endfor %}
+{% endblock %}
