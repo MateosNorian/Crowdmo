@@ -1,14 +1,28 @@
 {% extends "layout.html" %}
 {% block title %}Create{% endblock %}
 {% block content %}
+<div class="spacer"></div>
 <form method="POST" enctype="multipart/form-data">
-    <input type="text" name="title" placeholder="Fantasy Football by Betler">
-    <input type="file" name="image" id="image">
-    <label for="image">Select image...</label>
-    <textarea name="description" cols="30" rows="10"
-        placeholder="Get some money in the pot for Betler's fantasy league"></textarea>
-    <input type="text" name="goal">
-    <input type="text" name="min_contribution">
-    <input type="submit" value="Create crowdfund">
+    <div class="form-group">
+        <input type="text" name="title" placeholder="Crowdfund title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="image">Select image...</label>
+        <input type="file" name="image" id="image" class="form-control-file">
+    </div>
+    <div class="form-group">
+        <textarea name="description" cols="30" rows="10"
+            placeholder="Description of your Crowdfund.. what are you raising money for?"
+            class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="goal">What's your crowdfund goal?</label>
+        <input type="text" name="goal" placeholder="20" id="goal" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="min_contribution">What's the minimum amount someone can contribute?</label>
+        <input type="text" name="min_contribution" id="min_contribution" placeholder="5" class="form-control">
+    </div>
+    <input type="submit" value="Create crowdfund" class="btn btn-primary">
 </form>
 {% endblock %}

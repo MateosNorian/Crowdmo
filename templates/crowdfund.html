@@ -2,27 +2,51 @@
 {% block title %}{{post.title}}{% endblock %}
 
 {% block content %}
-<h1>{{post.title}}</h1>
-<p>Created on: {{post.created_date.month}}/{{post.created_date.day}}/{{post.created_date.year}}</p>
-<img src="{{ url_for('static', filename=post.image_location) }}">
-<!-- <h3>{{post.owner}}</h3> -->
-<p>{{post.description}}</p>
-<h4>Goal: {{progress}}/{{post.goal}}</h4>
-<div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0"
-        aria-valuemax="{{post.goal}}">
+<div class="row">
+    <div class="spacer"></div>
+    <div class="col-lg-8">
+        <h1>{{post.title}}</h1>
+        <p class="medium-text">Created on:
+            {{post.created_date.month}}/{{post.created_date.day}}/{{post.created_date.year}}</p>
+        <img src="{{ url_for('static', filename=post.image_location) }}" class="campaign-bg">
+
+        <hr>
+        <h5>{{post.owner}} created this crowdfund.</h5>
+        <hr>
+        <p>{{post.description}}</p>
+        <form method="POST">
+            <label for="venmo_username">Want to contribute? Type your Venmo username in below to be requested via
+                Venmo.</label>
+            <input type="text" name="venmo_username" class="form-control" id="venmo_username"
+                placeholder="YourUsername">
+            <input type="submit" value="Request me!" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="col-lg-4">
+        <div class="side-bar">
+            <h4>${{ '{0:0.2f}'.format(progress) }} <span class="goal">raised of ${{ '{0:0.2f}'.format(post.goal) }}
+                    goal</span></h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0"
+                    aria-valuemax="{{post.goal}}">
+                </div>
+            </div>
+            <p class="tiny-text">Minimum contribution: ${{ '{0:0.2f}'.format(post.min_contribution) }}</p>
+            <div class="spacer"></div>
+            <form method="POST">
+                <label for="venmo_username">Want to contribute?</label>
+                <input type="text" name="venmo_username" class="form-control" id="venmo_username"
+                    placeholder="Venmo username here">
+                <input type="submit" value="Request me!" class="btn btn-primary">
+            </form>
+            <hr>
+            <h3>Latest contributors</h3>
+            {% for donor in donors.keys() %}
+            <p>{{donor}} donated {{ '{0:0.2f}'.format(donors[donor]) }}</p>
+            <hr>
+            {% endfor %}
+            <p class="tiny-text">Last updated @ {{post.last_updated}}</p>
+        </div>
     </div>
 </div>
-<h3>Minimum contribution: {{post.min_contribution}}</h3>
-<form method="POST">
-    <label for="venmo_username">Want to contribute? Type your Venmo username in below to be requested via
-        Venmo.</label>
-    <input type="text" name="venmo_username">
-    <input type="submit" value="Request me!">
-</form>
-<h3>Latest contributors</h3>
-<p>Last updated @ {{post.last_updated}}</p>
-{% for donor in donors.keys() %}
-<p>{{donor}}-{{donors[donor]}}</p>
-{% endfor %}
 {% endblock %}

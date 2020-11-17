@@ -47,7 +47,10 @@ class Donations(db.Model):
 @app.route("/")
 def index():
     posts = Post.query.all()
-    return render_template("index.html", posts=posts)
+    progress = dict()
+    for post in posts:
+        progress[post] = sum(donation.amount for donatoin in post.donations)
+    return render_template("index.html", posts=posts, progress=progress)
 
 
 @app.route("/create", methods=["POST", "GET"])
@@ -71,7 +74,7 @@ def create():
 def crowdmo(id):
     # check the last time a post was updated, and if it has been greater than 2 hours, update again
     post = Post.query.filter_by(id=id).first()
-    if datetime.datetime.utcnow().hour - post.last_updated.hour > 2:
+    if abs(datetime.datetime.utcnow().hour - post.last_updated.hour) > 2:
         print("UPDATING DONORS")
         donors = venmo_request.update_contributors(
             search_note=post.title, access_token=post.access_token, creation_date=post.last_updated)

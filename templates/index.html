@@ -4,8 +4,18 @@
 
 {% block content %}
 {% for post in posts %}
-<h1><a href="/crowdmo/{{post.id}}">{{post.title}}</a></h1>
-<p>{{post.description}}</p>
-<p>{{post.goal}}</p>
+<div class="thumbnail">
+    <h1><a href="/crowdmo/{{post.id}}">{{post.title}}</a></h1>
+    <p>{{post.description}}</p>
+    <h4>${{ '{0:0.2f}'.format(progress[post]) }} <span class="goal">raised of
+            ${{ '{0:0.2f}'.format(post.goal) }}
+            goal</span></h4>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0"
+            aria-valuemax="{{post.goal}}">
+        </div>
+    </div>
+    <p>${{ '{0:0.2f}'.format(post.goal) }}</p>
+</div>
 {% endfor %}
 {% endblock %}
