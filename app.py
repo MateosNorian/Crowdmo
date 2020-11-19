@@ -7,14 +7,14 @@ from venmo_api import random_device_id
 import venmo_request
 app = Flask(__name__)
 
-with open("sensitive.txt", "r") as handle:
-    data = handle.read()
+# with open("sensitive.txt", "r") as handle:
+#     data = handle.read()
 
-config = json.loads(data)
-secret = config["secret"]
+# config = json.loads(data)
+# secret = config["secret"]
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
-app.secret_key = secret
+app.secret_key = os.environ.get('SECRET_KEY', None)
 db = SQLAlchemy(app)
 
 app.config["IMAGE_UPLOADS"] = "static/images"
