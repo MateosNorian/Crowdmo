@@ -58,7 +58,7 @@ def index():
 def create():
     if request.method == "POST":
         image = request.files["image"]
-        if image != "":
+        if image.filename != "":
             image.save(os.path.join(
                 app.config["IMAGE_UPLOADS"], image.filename))
             session["image"] = image.filename
