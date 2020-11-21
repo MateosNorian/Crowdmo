@@ -7,6 +7,7 @@ from venmo_api import random_device_id
 import venmo_request
 app = Flask(__name__)
 
+
 # with open("sensitive.txt", "r") as handle:
 #     data = handle.read()
 
@@ -56,11 +57,13 @@ def index():
 @app.route("/create", methods=["POST", "GET"])
 def create():
     if request.method == "POST":
-        if request.files:
-            image = request.files["image"]
+        image = request.files["image"]
+        if image != "":
             image.save(os.path.join(
                 app.config["IMAGE_UPLOADS"], image.filename))
             session["image"] = image.filename
+        else:
+            session["image"] = "venmo_logo.jpg"
         session["title"] = request.form["title"]
         session["description"] = request.form["description"]
         session["goal"] = request.form["goal"]
