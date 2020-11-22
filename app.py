@@ -132,7 +132,7 @@ def two_factor():
                 otp_secret=session["otp_secret"], otp_code=session["otp_code"], device_id=session["device_id"])
             print(f"access token: {session['access_token']}")
             create_post()
-            return "Success"
+            return redirect("/")
         return render_template("two_factor.html")
     flash("You must input a username and password first to do that!")
     return redirect("/login")
