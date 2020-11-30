@@ -6,11 +6,11 @@ Crowdmo is a web application that allows Venmo users to create crowdfunds. [Chec
   <tbody>
     <tr valign="top">
       <td width="25%" align="center">
-        <span>𝗛𝗧𝗠𝗟𝟱</span><br><br><br>
+        <span><strong>𝗛𝗧𝗠𝗟𝟱</strong></span><br><br><br>
         <img height="64px" src="https://cdn.svgporn.com/logos/html-5.svg">
       </td>
       <td width="25%" align="center">
-        <span>𝗖𝗦𝗦𝟯</span><br><br><br>
+        <span><strong>𝗖𝗦𝗦𝟯</strong></span><br><br><br>
         <img height="64px" src="https://cdn.svgporn.com/logos/css-3.svg">
       </td>
     </tr>
@@ -31,15 +31,15 @@ Crowdmo is a web application that allows Venmo users to create crowdfunds. [Chec
     </tr>
     <tr valign="top">
       <td width="25%" align="center">
-        <span>𝗚𝗶𝘁</span><br><br><br>
+        <span><strong>𝗚𝗶𝘁</strong></span><br><br><br>
         <img height="64px" src="https://cdn.svgporn.com/logos/git-icon.svg">
       </td>
       <td width="25%" align="center">
-        <span>𝗩𝗦 𝗖𝗼𝗱𝗲</span><br><br><br>
+        <span><strong>𝗩𝗦 𝗖𝗼𝗱𝗲</strong></span><br><br><br>
         <img height="64px" src="https://cdn.svgporn.com/logos/visual-studio-code.svg">
       </td>
       <td width="25%" align="center">
-        <span>Heroku</span><br><br><br>
+        <span><strong>Heroku</strong></span><br><br><br>
         <img height="64px" src="https://cdn.svgporn.com/logos/heroku-icon.svg">
       </td>
     </tr>
