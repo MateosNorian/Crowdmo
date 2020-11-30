@@ -43,7 +43,7 @@ Crowdmo is a web application that allows Venmo users to create crowdfunds.
 </table>
 
 # How do I use this app? :grey_question:
-To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
+To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
 
 # Can I see a demo of the app? :video_camera:
 
