@@ -1,4 +1,4 @@
-![Crowdmo Logo](static/images/crowdmo_logo.png)
+![Crowdmo Logo](https://i.ibb.co/7z2sJkd/crowdmo-logo.png)
 
 ## Overview
 
