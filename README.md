@@ -1,5 +1,5 @@
 # Crowdmo :money_with_wings:
-Crowdmo is a web application that allows Venmo users to create crowdfunds. [Check out the project website here](https://mateosnorian.github.io/Crowdmo/) -- this is not the actual web application
+Crowdmo is a web application that allows Venmo users to create crowdfunds. [Check out the project website here](https://mateosnorian.github.io/Crowdmo/). 
 
 # Which tecnologies does this app use? :computer:
 <table>
