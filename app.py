@@ -22,6 +22,13 @@ app.config["IMAGE_UPLOADS"] = "static/images"
 
 
 class Post(db.Model):
+    '''
+    Creates the Post table for the users db,
+    each Post has an id, owner, creation date, a unique access token, a title,
+    a description, a total money raised goal, a minimum contribution amount,
+    a last updated date, and an image location string. Also has a relationship
+    with the Donations table.
+    '''
     id = db.Column(db.Integer, primary_key=True)
     owner = db.Column(db.String(60), nullable=False)
     created_date = db.Column(db.DateTime, default=datetime.datetime.utcnow)
@@ -39,6 +46,10 @@ class Post(db.Model):
 
 
 class Donations(db.Model):
+    '''
+    Keeps track of the donations each Post has. Each record has an id, the username of the donor, 
+    a donation amount, and a foreign key of its post id.
+    '''
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(60), nullable=False)
     amount = db.Column(db.Float, nullable=False)
@@ -47,6 +58,11 @@ class Donations(db.Model):
 
 @app.route("/")
 def index():
+    '''
+    Queries the Post table and returns all posts, 
+    also checks donation progress on each invidual post.
+    Returns the index.html template.
+    '''
     posts = Post.query.all()
     progress = dict()
     for post in posts:
@@ -56,6 +72,11 @@ def index():
 
 @app.route("/create", methods=["POST", "GET"])
 def create():
+    '''
+    Stores information from create form in a session.
+    Redirects users to the "/login" route if form completion
+    is successful.
+    '''
     if request.method == "POST":
         image = request.files["image"]
         if image.filename != "":
@@ -75,6 +96,15 @@ def create():
 
 @app.route("/crowdmo/<id>", methods=["POST", "GET"])
 def crowdmo(id):
+    '''
+    Selects post within given Id froms Post table.
+    Checks to see when the last time the Post's donors were
+    updated. If it has been more than 2 hours since update
+    it reupdates the donors. This check is done to avoid hitting the Venmo
+    API too much and being locked out.
+
+    Updates the Donors table if there have been new donors.
+    '''
     # check the last time a post was updated, and if it has been greater than 2 hours, update again
     post = Post.query.filter_by(id=id).first()
     if abs(datetime.datetime.utcnow().hour - post.last_updated.hour) > 2:
@@ -106,6 +136,14 @@ def crowdmo(id):
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
+    '''
+    Prompts user for Venmo login information,
+    generates one time password secret using
+    login info -- stores this information in the session.
+
+    Redirects user to /two_factor if username 
+    and password do not return any errors.
+    '''
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
@@ -123,6 +161,15 @@ def login():
 
 @app.route("/two_factor", methods=["POST", "GET"])
 def two_factor():
+    ''' 
+    Prompts user for one time password code
+    that is sent to the user's phone #. Creates
+    an access token using the users otp secret
+    and the otp code that the user inputs.
+
+    After the user finishes 2FA their Post is added
+    post table, and they are redirected to "/"
+    '''
     if "otp_secret" in session:
         if request.method == "POST":
             session["otp_code"] = request.form["otp_code"]
@@ -139,6 +186,9 @@ def two_factor():
 
 
 def create_post():
+    '''
+    Adds a new record to the post table.
+    '''
     if session["access_token"] != None:
         newPost = Post(access_token=session["access_token"], title=session["title"], image_location="images/" + session["image"],
                        owner=session["username"], description=session["description"], goal=session["goal"], min_contribution=session["min_contribution"])
