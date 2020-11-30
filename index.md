@@ -1,3 +1,5 @@
+![Crowdmo Logo](static/images/crowdmo_logo.png)
+
 ## Overview
 
 Crowdmo is a web application that allows users to create Venmo "crowdfunds"
