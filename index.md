@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+## Overview
 
-You can use the [editor on GitHub](https://github.com/MateosNorian/Crowdmo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Crowdmo is a web application that allows users to create Venmo "crowdfunds"
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Why did I build this web app?
 
-### Markdown
+Last year I watched a number of my friends take part in paid fantasy football leagues, a typical buy in was about $10. Some of these leagues had over 30 people, and getting everyone to pay the buy in fee was difficult. Who should I Venmo the buy in fee? How much is the total pot worth? What's the buy in fee? In order to simplify the payment process for these leagues, I built a web app that allowed users to create GoFundMe like campaigns, the only difference being all of the money was transacted through Venmo.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Want to learn more about the project?
 
-```markdown
-Syntax highlighted code block
+Check out the project's readme: https://github.com/MateosNorian/Crowdmo/blob/master/README.md.
 
-# Header 1
-## Header 2
-### Header 3
+### Want to check out the web application?
 
-- Bulleted
-- List
+Navigate to https://crowdmo.herokuapp.com
 
-1. Numbered
-2. List
+### Disclaimer
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MateosNorian/Crowdmo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This web application was not built for production and is not intended to be used by the public.
