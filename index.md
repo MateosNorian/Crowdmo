@@ -8,11 +8,11 @@ Last year I watched a number of my friends take part in paid fantasy football le
 
 ### Want to learn more about the project?
 
-Check out the project's readme: https://github.com/MateosNorian/Crowdmo/blob/master/README.md.
+[Check out the project's readme](https://github.com/MateosNorian/Crowdmo/blob/master/README.md)
 
 ### Want to check out the web application?
 
-Navigate to https://crowdmo.herokuapp.com
+Navigate to [https://crowdmo.herokuapp.com](https://crowdmo.herokuapp.com)
 
 ### Disclaimer
 
