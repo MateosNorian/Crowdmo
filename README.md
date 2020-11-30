@@ -47,4 +47,6 @@ To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you mus
 
 # Can I see a demo of the app? :video_camera:
 
+# Attribution :fire:
+This app uses the awesome [Venmo API Python Wrapper](https://github.com/mmohades/Venmo) created by [Mark Mohades](https://github.com/mmohades).
 
