@@ -53,8 +53,8 @@ To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you mus
 1. Install the code for this project
 2. Open the command prompt/terminal
 3. Navigate to the directory the project was installed in
-4. On Windows, run ```venv\Scripts\Activate
-5. Then ```flask run
+4. On Windows, run ```venv\Scripts\Activate```
+5. Then ```flask run```
 6. Navigate to ```127.0.0.1:5000/``` in the browswer
 7. Have fun!
 
