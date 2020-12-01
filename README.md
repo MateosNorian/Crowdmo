@@ -51,12 +51,15 @@ To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you mus
 
 # Want to run Crowdmo on your local machine? :round_pushpin:
 1. Install the code for this project
-2. Open the command prompt/terminal
-3. Navigate to the directory the project was installed in
-4. On Windows, run ```venv\Scripts\Activate```
-5. Then ```flask run```
-6. Navigate to ```127.0.0.1:5000/``` in the browswer
-7. Have fun!
+2. Navigate to the app.py file
+3. Change ```app.secret_key = os.environ.get('SECRET_KEY', None)``` to ```app.secret_key = "testing"```
+4. Save the file
+5. Open the command prompt/terminal
+6. Navigate to the directory the project was installed in
+7. On Windows, run ```> venv\Scripts\Activate``` on Mac, run ```$ . venv/bin/activate```
+8. Then ```flask run```
+9. Navigate to ```127.0.0.1:5000/``` in the browswer
+10. Have fun!
 
 # Can I see a demo of the app? :video_camera:
 [![Crowdmo Demo](http://img.youtube.com/vi/yT0J0RpvATk/0.jpg)](http://www.youtube.com/watch?v=yT0J0RpvATk "Crowdmo Demo")
