@@ -1,3 +1,5 @@
+<img height="120px" src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png">
+
 # Crowdmo :money_with_wings:
 Crowdmo is a web application that allows Venmo users to create crowdfunds. <br><br>
 For example, imagine you wanted to pool together money for a fantasy football league, but you didn't want to go through the hassle of collecting cash from everyone, or individually Venmo requesting everyone and monitoring whether or not they had paid yet. <br><br>
