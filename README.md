@@ -1,5 +1,5 @@
 # Crowdmo :money_with_wings:
-Crowdmo is a web application that allows Venmo users to create crowdfunds. [Check out the project website here](https://mateosnorian.github.io/Crowdmo/). 
+Crowdmo is a web application that allows Venmo users to create crowdfunds. For example, imagine you wanted to pool together money for a fantasy football league, but you didn't want to go through the hassle of collecting cash from everyone, or individually venmo requesting everyone. Instead, you could create a crowdfund with Crowdmo. Using Crowdmo, you could specify a minimum league buy in, and a total cash goal for the crowdfund. After creating your crowdfund you could simply text the link to everyone in your league, and all they would have to do is type in their Venmo username and pay the minimum contribution fee via Venmo. [Check out the project website here](https://mateosnorian.github.io/Crowdmo/). 
 
 # Which tecnologies does this app use? :computer:
 <table>
