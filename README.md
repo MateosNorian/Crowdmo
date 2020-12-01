@@ -1,4 +1,4 @@
-<img height="120px" src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png" style="text-align:center;">
+<img height="240px" src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png">
 
 # Crowdmo :money_with_wings:
 Crowdmo is a web application that allows Venmo users to create crowdfunds. <br><br>
