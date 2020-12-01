@@ -1,5 +1,5 @@
 <div style="display:flex;align-content:center;justify-content:center;">
-<img src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png" height="240px">
+        <img src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png" height="240px">
 </div>
 
 # Crowdmo :money_with_wings:
