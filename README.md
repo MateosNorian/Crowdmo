@@ -49,6 +49,15 @@ Crowdmo is a web application that allows Venmo users to create crowdfunds. [Chec
 # How do I use this app? :grey_question:
 To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
 
+# Want to run Crowdmo on your local machine? :round_pushpin:
+1. Install the code for this project
+2. Open the command prompt/terminal
+3. Navigate to the directory the project was installed in
+4. On Windows, run ```venv\Scripts\Activate
+5. Then ```flask run
+6. Navigate to ```127.0.0.1:5000/``` in the browswer
+7. Have fun!
+
 # Can I see a demo of the app? :video_camera:
 [![Crowdmo Demo](http://img.youtube.com/vi/yT0J0RpvATk/0.jpg)](http://www.youtube.com/watch?v=yT0J0RpvATk "Crowdmo Demo")
 
