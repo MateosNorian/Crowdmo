@@ -57,7 +57,15 @@ To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you mus
 5. Open the command prompt/terminal
 6. Navigate to the directory the project was installed in
 7. On Windows, run ```> venv\Scripts\Activate``` on Mac, run ```$ . venv/bin/activate```
-8. Then ```flask run```
+8. Then, on Windows
+```
+> set FLASK_APP = app.py
+> flask run
+```
+```
+$ export FLASK_APP = app.py
+$ flask run
+```
 9. Navigate to ```127.0.0.1:5000/``` in the browswer
 10. Have fun!
 
