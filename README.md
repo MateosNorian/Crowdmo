@@ -1,4 +1,4 @@
-<div style="display:flex;align-content:center;justify-content:center;height:300px;">
+<div style="text-align:center;">
         <img src="https://i.ibb.co/7z2sJkd/crowdmo-logo.png" height="240px">
 </div>
 
