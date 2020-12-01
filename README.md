@@ -57,7 +57,7 @@ Please note, you must have Python 3 installed
 4. Save the file
 5. Open the command prompt/terminal
 6. Navigate to the directory the project was installed in
-7. On Windows, run ```> $ py -3 -m venv venv``` on Mac, run ```$ python3 -m venv venv```
+7. On Windows, run ```> py -3 -m venv venv``` on Mac, run ```$ python3 -m venv venv```
 8. On Windows, run ```> venv\Scripts\Activate``` on Mac, run ```$ . venv/bin/activate```
 9. Then install the necessary packages, ```pip install Flask Flask-SQLAlchemy requests```
 8. Then, on Windows
