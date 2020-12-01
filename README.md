@@ -52,7 +52,7 @@ Instead, you could create a crowdfund with Crowdmo. Using Crowdmo, you could spe
 To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
 
 # Want to run Crowdmo on your local machine? :round_pushpin:
-Please note, you must have Python 3 installed
+<strong>Please note, you must have Python 3 installed on your machine for these instructions to work</strong>
 1. Install the code for this project
 2. Navigate to the app.py file
 3. Change ```app.secret_key = os.environ.get('SECRET_KEY', None)``` to ```app.secret_key = "testing"```
