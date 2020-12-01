@@ -50,13 +50,16 @@ Crowdmo is a web application that allows Venmo users to create crowdfunds. [Chec
 To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
 
 # Want to run Crowdmo on your local machine? :round_pushpin:
+Please note, you must have Python 3 installed
 1. Install the code for this project
 2. Navigate to the app.py file
 3. Change ```app.secret_key = os.environ.get('SECRET_KEY', None)``` to ```app.secret_key = "testing"```
 4. Save the file
 5. Open the command prompt/terminal
 6. Navigate to the directory the project was installed in
-7. On Windows, run ```> venv\Scripts\Activate``` on Mac, run ```$ . venv/bin/activate```
+7. On Windows, run ```> $ py -3 -m venv venv``` on Mac, run ```$ python3 -m venv venv```
+8. On Windows, run ```> venv\Scripts\Activate``` on Mac, run ```$ . venv/bin/activate```
+9. Then install the necessary packages, ```pip install Flask Flask-SQLAlchemy requests```
 8. Then, on Windows
 ```
 > set FLASK_APP = app.py
