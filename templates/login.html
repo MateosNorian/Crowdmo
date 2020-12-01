@@ -2,9 +2,10 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+<h3>Please enter your Venmo login info</h3>
 <form method="POST">
-    <input type="text" name="username" class="form-control">
-    <input type="password" name="password" class="form-control">
+    <input type="text" name="username" class="form-control" placeholder="Venmo username">
+    <input type="password" name="password" class="form-control" placeholder="Venmo password">
     <input type="submit" value="Go!" class="btn btn-primary">
 </form>
 {% endblock %}
