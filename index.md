@@ -16,6 +16,9 @@ Last year I watched a number of my friends take part in paid fantasy football le
 
 Navigate to [https://crowdmo.herokuapp.com](https://crowdmo.herokuapp.com)
 
+## Check out a video demo of the web app
+[![Crowdmo Demo](http://img.youtube.com/vi/yT0J0RpvATk/0.jpg)](http://www.youtube.com/watch?v=yT0J0RpvATk "Crowdmo Demo")
+
 ### Disclaimer
 
 This web application was not built for production and is not intended to be used by the public.
