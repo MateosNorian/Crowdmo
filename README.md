@@ -51,7 +51,11 @@ Instead, you could create a crowdfund with Crowdmo. Using Crowdmo, you could spe
 </table>
 
 # How do I use this app? :grey_question:
-To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you must sign in to your Venmo account and complete 2FA. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and complete the create campaign flow.
+1. To use Crowdmo, visit https://crowdmo.herokuapp.com, 
+2. To create a crowdfund, navigate to https://crowdmo.herokuapp.com/create and fill out some info about your crowdfund.
+3. Type in your Venmo username and password.
+4. Input the 2FA code you receive on your phone.
+5. Done! Send the link to some people and watch your crowdfund grow!
 
 # Want to run Crowdmo on your local machine? :round_pushpin:
 <strong>Please note, you must have [Python 3](https://www.python.org/downloads/) installed on your machine for these instructions to work</strong>
