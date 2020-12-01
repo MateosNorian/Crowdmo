@@ -62,6 +62,7 @@ To use Crowdmo, visit https://crowdmo.herokuapp.com, to create a Crowdmo you mus
 > set FLASK_APP = app.py
 > flask run
 ```
+on Mac
 ```
 $ export FLASK_APP = app.py
 $ flask run
